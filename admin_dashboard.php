@@ -1,41 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>User Information</title>
-    <style>
-    body{
-    background-image:url(./back.png);
-    max-width: 100%;
-    background-size:cover;
-    background-repeat: no-repeat;
-}</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+<body style="background-image:url(./back.png);background-repeat: no-repeat;
+background-size:cover; ">
+  <h1 id="h1" style="text-align: center;">Welcome in Admin Page </h1>
 
-<body style="background-image:url(./back.png);">
 <?php
-session_start();
-if (isset($_SESSION['email']) && isset($_SESSION['firstname']) && isset($_SESSION['familyname'])) {
-    $email = $_SESSION['email'];
-    $firstName = $_SESSION['firstname'];
-    $familyName = $_SESSION['familyname'];
+require("config.php");
+$userData="SELECT * FROM users";
+$sql=$conn->query($userData);
 
-    // Extract the first name, last name, and family name from the full name
-    $nameParts = explode(' ', $firstName);
+    if($sql->num_rows > 0){
+        echo"<table border='2' style='margin-left: 30%; margin-top:10%;'>";
+        echo "<tr>";
+        echo "<th>User Name</th>";
+        echo "<th>middle_name</th>";
+        echo "<th>lasttname</th>";
+        echo "<th>familyname</th>";
+        echo "<th>User Email</th>";
+        echo "<th>phonenumber</th>";
+        echo "<th>birth</th>";
+        echo "</tr>";
 
-    // Ensure there are enough parts before accessing the last name
-    if (count($nameParts) >= 2) {
-        $lastName = end($nameParts); // Last part is the last name
+        while($row=$sql->fetch_assoc()){
+            echo "<tr>";
+            echo "<td>".$row['firstname']."</td>"; 
+            echo "<td>".$row['middle_name']."</td>"; 
+            echo "<td>".$row['lastname']."</td>";
+            echo "<td>".$row['familyname']."</td>"; 
+            echo "<td>".$row['email']."</td>";  
+            echo "<td>".$row['phonenumber']."</td>";
+            echo "<td>".$row['birth']."</td>";
+            echo "</tr>";
+        }
+
+        echo "</table>";
+
     } else {
-        $lastName = ''; // Set an empty last name
+        echo "No Data Found";
     }
 
-    // Display the user information
-    echo "<h1>Welcome, $firstName</h1>";
-    echo "<p>Email: $email</p>";
-    echo "<p>Full Name: $firstName $lastName $familyName</p>";
-} else {
-    echo "<h2>Welcome!</h2>";
-}
 ?>
+
+<button style=" margin-left:47% ;margin-top:4%; background-color:#CFDB2F; border-color:#CFDB2F; border-raduis:2px; cursor:pointer;">
+    <a href="./index.html" style="text-decoration: none; font-weight: bold; color: black;">Log out</a>
+</button>
 </body>
 </html>

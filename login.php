@@ -29,12 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         if (password_verify($password, $row['password1'])) {
             if ($row['user_type'] === 'super_user') {
-                header("Location: user_dashboard.php");
+                header("Location: admin_dashboard.php"); 
             } else {
-                $_SESSION['email'] = $email;
-                $_SESSION['name'] = $row['first_name'] . ' ' . $row['middle_name'] . ' ' . $row['last_name'];
-                $_SESSION['familyName'] = $row['familyname'];
-                header("Location: admin_dashboard.php");
+                header("Location: user_dashboard.php");
+               
             }
             
             // You can set additional session variables as needed

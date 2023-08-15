@@ -21,9 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             if (data.success) {
                 if (data.admin) {
-                    window.location.href = 'admin_dashboard.php';
-                } else {
                     window.location.href = 'user_dashboard.php';
+                    
+                } else {   window.location.href = 'admin_dashboard.php'; 
+                   
                 }
             } else {
                 document.getElementById("errorMessage").textContent = "Invalid email or password.";
