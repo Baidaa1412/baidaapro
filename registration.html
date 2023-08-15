@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body class="regbod" style=" background-image: url(./signup.png) ;
+background-repeat: no-repeat;
+background-position: bottom left;
+">
+<div>
+    <form class="registerForm" id="registrationForm" method="post">
+        <div class="container">
+            <div>
+                <div>
+                    <h1>Registration</h1>
+                    <input class="inputreg" id="fname" type="text" name="firstname" required pattern="[A-Za-z]+" placeholder="First Name"><br>
+                    <input class="inputreg" id="middle_name" type="text" name="middle_name" required pattern="[A-Za-z]+" placeholder="Middle Name"><br>
+                    <input class="inputreg" id="lastname" type="text" name="lastname" required pattern="[A-Za-z]+"  placeholder="Last Name"><br>
+                    <input class="inputreg"id="familyname" type="text" name="familyname" required pattern="[A-Za-z]+" placeholder="Family Name"><br>
+                    <input class="inputreg"id="email" type="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"placeholder="Email"><br>
+                    <input class="inputreg"id="phonenumber" type="text" name="phonenumber" required pattern="[0-9]{14}" placeholder="Mobile"><br>
+                    <input class="inputreg" id="password" type="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"placeholder="Password"><br>
+                    <input class="inputreg" id="confirmpassword" type="password" name="confirmpassword" required placeholder="confirm password"><br>
+                <input  id="dob" class="inputreg" type="date" name="dob" required  max="2007-01-01"><br><br><br>
+                <select id="user_type" name="user_type" required>
+                    <option value="">Select User Type</option>
+                    <option value="user">User</option>
+                    <option value="super_user">Super User</option>
+                  </select><br><br>
+                    <input class="regbtn" type="submit" id="register" name="create" value="Sign Up" ><br>
+                    <p>Already have an account? <a href="./login.html">Login Now</a></p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="./signup.js"></script>
+</body>
+</html>

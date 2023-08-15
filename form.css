@@ -1,0 +1,74 @@
+
+.button{
+    color: black;
+font-size: medium;
+background-color:#CFDB2F;
+border-radius: 5px;
+border: none;
+padding: 1.5%;
+width:25%;
+margin-left: 35%;
+height: 40px;}
+.inp{
+width: 100%;
+height: 40px;
+border-radius:5px;
+
+}
+
+a{
+cursor: pointer;
+text-decoration: none;
+font-weight: bold;
+color:#CFDB2F;
+}
+.registerForm{
+    text-align: center;
+}
+.inputreg{
+    padding: 9px;
+    margin: 8px;
+    width: 40%;
+    height: 18px;
+border-radius:5px;
+}
+.regbtn{
+    color: black;
+    font-size: medium;
+    background-color:#CFDB2F;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    width: 10%;
+    
+}
+.brand_logo{
+    margin-left: -75%;
+ 
+}
+.regbod{
+    background-image: url(./signup.png) ;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+}
+.logbod{
+    margin-left: 20%;
+    margin-top: 10%;
+   
+   
+}
+.inputlog{
+    width: 100%;
+
+
+}
+.inputtext{
+  width: 25%;
+    height: 30px;
+    border-radius: 5px;
+}
+.logbod{
+    background-image: url(./login.png) ;
+    background-repeat: no-repeat;
+    background-position: top right;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="form.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" >
+</head>
+<body class="logbod">
+<div class="container h-100">
+	<div>
+		<div class="user_card" style=" text-align: center;">
+			<div >
+				<div class="brand_logo_container">
+					<img src="./logo.jpg" class="brand_logo" alt=" logo" style="width:12%">
+				</div><br><br>
+			</div>	
+			<div >
+				<form id="login" >
+					<div class="con" style="display: flex;">
+						<input class="inputtext" type="text" name="username" id="email" class="form-control input_user" required placeholder="Email">
+					</div><br><br>
+					<div style="display: flex;">
+
+						<input class="inputtext" type="password" name="password" id="password" class="form-control input_pass" required placeholder="Password">
+					</div>
+					</div><br>
+				
+			</div>
+			<input  style="margin-left:7%;"class="regbtn" type="submit" value="Login" >
+			<div class="mt-4">
+				<div  style="margin-left: 4%;">
+					Don't have an account? <a href="registration.html" class="ml-2">Sign Up</a>
+				</div>
+			</form>
+			
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mt-4">
+    <div id="errorMessage" style="color: red;"></div>
+</div>
+<script src="login.js"></script>
+</body>
+</html>
